@@ -27,4 +27,8 @@ Load the `extension/` folder in Chrome developer mode.
 ## Accuracy
 - Random Forest: 99.67% accuracy · F1: 0.7789
 - Trained on 96,674 job posts
+<<<<<<< HEAD
 - India + Global coverage
+=======
+- India + Global coverage
+>>>>>>> dba8d61266275ec1a06a924ad02a64d3d939d5fd
