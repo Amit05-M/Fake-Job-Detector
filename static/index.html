@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fake Job Detector — India</title>
+  <link rel="stylesheet" href="/static/style.css"/>
+</head>
+<body>
+  <div class="container">
+
+    <div class="header">
+      <h1>Fake Job Post Detector</h1>
+      <p>Powered by Machine Learning · Trained on 96,000+ real & fake job posts</p>
+      <div class="badges">
+        <span class="badge">Random Forest</span>
+        <span class="badge">TF-IDF NLP</span>
+        <span class="badge">99.67% Accuracy</span>
+        <span class="badge">India + Global</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <textarea id="jobText"
+        placeholder="Paste the job post you received here — from WhatsApp, Naukri, LinkedIn, email, or anywhere. Include the job title, company name, salary, description, requirements, and contact details for best results."></textarea>
+    <div class="btn-row">
+        <button class="btn-secondary" onclick="loadExample('fake')">Load fake example</button>
+        <button class="btn-secondary" onclick="loadExample('real')">Load real example</button>
+        <button class="btn-primary"   onclick="analyze()">Analyze &#8594;</button>
+      </div>
+    </div>
+
+    <div id="loading" class="hidden">
+      <div class="spinner"></div>
+      <p>Running ML model...</p>
+    </div>
+
+    <div id="result" class="hidden">
+
+      <div class="score-card" id="scoreCard">
+        <div class="score-circle" id="scoreCircle">
+          <span id="scoreNumber">0</span>
+          <small>risk</small>
+        </div>
+        <div class="score-info">
+          <h2 id="verdict"></h2>
+          <p id="verdictSub"></p>
+          <p id="mlConfidence" class="ml-conf"></p>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Summary</h3>
+        <p id="summary"></p>
+      </div>
+
+      <div class="card">
+        <h3>Signals detected</h3>
+        <div id="flags"></div>
+      </div>
+
+      <div class="card" id="missingCard">
+        <h3>Missing from this post</h3>
+        <div id="missing"></div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>

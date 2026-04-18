@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Fake Job Detector</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <div class="header">
+    <div class="logo">FJD</div>
+    <div>
+      <div class="title">Fake Job Detector</div>
+      <div class="subtitle">ML-powered · India + Global</div>
+    </div>
+  </div>
+
+  <div id="home">
+    <p class="hint">Click Analyze to scan the current job page, or paste any job post below.</p>
+    <button id="analyzePageBtn" class="btn-primary">Analyze this page</button>
+    <div class="divider">or paste manually</div>
+    <textarea id="manualText" placeholder="Paste job post text here..."></textarea>
+    <button id="analyzeManualBtn" class="btn-secondary">Analyze pasted text</button>
+  </div>
+
+  <div id="loading" class="hidden">
+    <div class="spinner"></div>
+    <p>Running ML model...</p>
+  </div>
+
+  <div id="result" class="hidden">
+    <div class="score-row">
+      <div class="score-circle" id="scoreCircle">
+        <span id="scoreNum">0</span>
+        <small>risk</small>
+      </div>
+      <div>
+        <div class="verdict" id="verdict"></div>
+        <div class="verdict-sub" id="verdictSub"></div>
+        <div class="ml-conf" id="mlConf"></div>
+      </div>
+    </div>
+
+    <div class="section-title">Summary</div>
+    <p class="summary" id="summary"></p>
+
+    <div class="section-title">Signals</div>
+    <div id="flags"></div>
+
+    <div id="missingWrap">
+      <div class="section-title">Missing info</div>
+      <div id="missing"></div>
+    </div>
+
+    <button id="backBtn" class="btn-back">Check another job</button>
+  </div>
+
+  <div id="error" class="hidden">
+    <p id="errorMsg"></p>
+    <button id="retryBtn" class="btn-back">Try again</button>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
