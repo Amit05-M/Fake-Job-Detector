@@ -1,5 +1,4 @@
-const API_URL = "http://127.0.0.1:5000/analyze";
-
+const API_URL = "https://fake-job-detector-np6q.onrender.com";
 // ── Button listeners ──
 document.getElementById("analyzePageBtn").addEventListener("click", analyzePage);
 document.getElementById("analyzeManualBtn").addEventListener("click", analyzeManual);
