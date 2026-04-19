@@ -3,38 +3,236 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Fake Job Detector — India</title>
+  <title>Fake Job Detector India — Check if a Job Post is Real or Fake</title>
+  <meta name="description" content="Free AI tool to detect fake job posts in India. Trained on 96,000+ real job listings. Works for Naukri, LinkedIn, Indeed, WhatsApp job forwards."/>
+  <meta name="keywords" content="fake job detector india, job scam checker, naukri fake job, linkedin fake job, job fraud india"/>
+  <meta property="og:title" content="Fake Job Detector India"/>
+  <meta property="og:description" content="Check if any job post is real or fake using Machine Learning. Free tool for Indian job seekers."/>
+  <meta property="og:url" content="https://fake-job-detector-np6q.onrender.com/"/>
+  <meta name="google-adsense-account" content="ca-pub-XXXXXXXXXXXXXXXX"/>
+
+  <!-- Google AdSense — replace with your real publisher ID -->
+  <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script> -->
+
   <link rel="stylesheet" href="/static/style.css"/>
+
+  <style>
+    .site-header {
+      background: linear-gradient(135deg, #1a237e 0%, #3949ab 100%);
+      color: #fff;
+      text-align: center;
+      padding: 2.5rem 1rem 2rem;
+      margin-bottom: 2rem;
+    }
+    .site-header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    .site-header p {
+      font-size: 1rem;
+      opacity: 0.9;
+      margin-bottom: 1rem;
+    }
+    .header-badges {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+    }
+    .hbadge {
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.3);
+      color: #fff;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.78rem;
+      font-weight: 500;
+    }
+    .ad-slot {
+      background: #f9f9f9;
+      border: 1px dashed #ddd;
+      border-radius: 8px;
+      padding: 1rem;
+      text-align: center;
+      color: #bbb;
+      font-size: 0.8rem;
+      margin-bottom: 1.25rem;
+      min-height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .how-it-works {
+      background: #fff;
+      border-radius: 14px;
+      padding: 1.5rem;
+      margin-bottom: 1.25rem;
+      border: 1px solid #e4e4e4;
+    }
+    .how-it-works h3 {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: #999;
+      margin-bottom: 1rem;
+      font-weight: 500;
+    }
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
+    .step {
+      text-align: center;
+    }
+    .step-num {
+      width: 32px;
+      height: 32px;
+      background: #e8eaf6;
+      color: #3949ab;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.9rem;
+      margin: 0 auto 8px;
+    }
+    .step p {
+      font-size: 0.82rem;
+      color: #555;
+      line-height: 1.5;
+    }
+    .warning-box {
+      background: #fff8e1;
+      border: 1px solid #ffe082;
+      border-radius: 10px;
+      padding: 1rem 1.25rem;
+      margin-bottom: 1.25rem;
+      font-size: 0.88rem;
+      color: #5d4037;
+      line-height: 1.6;
+    }
+    .warning-box strong { color: #e65100; }
+    .site-footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      color: #aaa;
+      font-size: 0.82rem;
+      border-top: 1px solid #eee;
+      margin-top: 2rem;
+    }
+    .site-footer a { color: #3949ab; text-decoration: none; }
+    .examples-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-top: 10px;
+    }
+    .example-card {
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      padding: 10px 12px;
+      cursor: pointer;
+      font-size: 0.82rem;
+      background: #fafafa;
+      transition: background 0.2s;
+    }
+    .example-card:hover { background: #f0f2ff; border-color: #c5cae9; }
+    .example-card .ex-label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 3px;
+    }
+    .ex-fake { color: #c62828; }
+    .ex-real { color: #2e7d32; }
+    .example-card p { color: #666; line-height: 1.4; }
+    @media (max-width: 600px) {
+      .steps { grid-template-columns: 1fr; }
+      .examples-grid { grid-template-columns: 1fr; }
+      .site-header h1 { font-size: 1.5rem; }
+    }
+  </style>
 </head>
 <body>
+
+  <!-- Header -->
+  <div class="site-header">
+    <h1>Fake Job Detector India</h1>
+    <p>Paste any job post — from WhatsApp, Naukri, LinkedIn or email — and our AI tells you if it is real or fake</p>
+    <div class="header-badges">
+      <span class="hbadge">Random Forest ML</span>
+      <span class="hbadge">99.67% Accuracy</span>
+      <span class="hbadge">96,000+ Jobs Trained</span>
+      <span class="hbadge">India + Global</span>
+      <span class="hbadge">100% Free</span>
+    </div>
+  </div>
+
   <div class="container">
 
-    <div class="header">
-      <h1>Fake Job Post Detector</h1>
-      <p>Powered by Machine Learning · Trained on 96,000+ real & fake job posts</p>
-      <div class="badges">
-        <span class="badge">Random Forest</span>
-        <span class="badge">TF-IDF NLP</span>
-        <span class="badge">99.67% Accuracy</span>
-        <span class="badge">India + Global</span>
+    <!-- Top Ad Slot -->
+    <div class="ad-slot">
+      <!-- AdSense ad will appear here after approval -->
+      Advertisement
+    </div>
+
+    <!-- Warning box -->
+    <div class="warning-box">
+      <strong>Did you receive a job offer on WhatsApp?</strong> Scammers are sending fake job offers to millions of Indians daily. Paste the job post below and find out instantly if it is safe to apply.
+    </div>
+
+    <!-- How it works -->
+    <div class="how-it-works">
+      <h3>How it works</h3>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <p>Copy the job post you received from anywhere</p>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <p>Paste it in the box below and click Analyze</p>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <p>Get instant risk score, verdict and red flags</p>
+        </div>
       </div>
     </div>
 
+    <!-- Main input card -->
     <div class="card">
       <textarea id="jobText"
-        placeholder="Paste the job post you received here — from WhatsApp, Naukri, LinkedIn, email, or anywhere. Include the job title, company name, salary, description, requirements, and contact details for best results."></textarea>
-    <div class="btn-row">
-        <button class="btn-secondary" onclick="loadExample('fake')">Load fake example</button>
-        <button class="btn-secondary" onclick="loadExample('real')">Load real example</button>
-        <button class="btn-primary"   onclick="analyze()">Analyze &#8594;</button>
+        placeholder="Paste the full job post here — title, company name, salary, contact details, requirements, everything you received..."></textarea>
+
+      <!-- Example cards -->
+      <div class="examples-grid">
+        <div class="example-card" onclick="loadExample('fake')">
+          <div class="ex-label ex-fake">Try fake example</div>
+          <p>WhatsApp job · ₹45,000/week · registration fee required</p>
+        </div>
+        <div class="example-card" onclick="loadExample('real')">
+          <div class="ex-label ex-real">Try real example</div>
+          <p>Infosys Bangalore · Java Engineer · official email</p>
+        </div>
+      </div>
+
+      <div class="btn-row">
+        <button class="btn-primary" onclick="analyze()">Analyze Job Post &#8594;</button>
       </div>
     </div>
 
+    <!-- Loading -->
     <div id="loading" class="hidden">
       <div class="spinner"></div>
       <p>Running ML model...</p>
     </div>
 
+    <!-- Result -->
     <div id="result" class="hidden">
 
       <div class="score-card" id="scoreCard">
@@ -47,6 +245,12 @@
           <p id="verdictSub"></p>
           <p id="mlConfidence" class="ml-conf"></p>
         </div>
+      </div>
+
+      <!-- Mid Ad Slot -->
+      <div class="ad-slot">
+        <!-- AdSense ad will appear here after approval -->
+        Advertisement
       </div>
 
       <div class="card">
@@ -64,9 +268,86 @@
         <div id="missing"></div>
       </div>
 
+      <!-- Share buttons -->
+      <div class="card">
+        <h3>Help others stay safe</h3>
+        <div style="display:flex; gap:10px; flex-wrap:wrap;">
+          <button class="btn-secondary" onclick="shareWhatsApp()" style="flex:1;">
+            Share on WhatsApp
+          </button>
+          <button class="btn-secondary" onclick="shareTwitter()" style="flex:1;">
+            Share on Twitter
+          </button>
+          <button class="btn-secondary" onclick="copyLink()" style="flex:1;">
+            Copy link
+          </button>
+        </div>
+      </div>
+
+      <!-- Report button -->
+      <div style="text-align:center; margin-bottom:1rem;">
+        <a href="https://cybercrime.gov.in" target="_blank"
+           style="color:#c62828; font-size:0.85rem; text-decoration:none;">
+          Report this job to cybercrime.gov.in &#8594;
+        </a>
+      </div>
+
     </div>
+
+    <!-- Bottom Ad Slot -->
+    <div class="ad-slot">
+      <!-- AdSense ad will appear here after approval -->
+      Advertisement
+    </div>
+
+    <!-- SEO content -->
+    <div class="how-it-works">
+      <h3>Common fake job scams in India</h3>
+      <ul style="font-size:0.88rem; color:#555; line-height:2; padding-left:1.2rem;">
+        <li>Work from home data entry jobs paying ₹500-800 per hour</li>
+        <li>Jobs requiring registration fee or joining fee upfront</li>
+        <li>Recruiter contacting only via WhatsApp or Telegram</li>
+        <li>Jobs offering salary of ₹50,000+ per week for no experience</li>
+        <li>Fake Infosys, TCS, Wipro job offers sent on WhatsApp</li>
+        <li>Part-time jobs asking for Aadhaar and bank details upfront</li>
+        <li>Government job offers from fake ministry websites</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <div class="site-footer">
+    <p>Fake Job Detector India · Free tool for Indian job seekers</p>
+    <p style="margin-top:6px;">
+      <a href="/privacy">Privacy Policy</a> ·
+      <a href="https://github.com/yourusername/fake-job-detector" target="_blank">GitHub</a> ·
+      <a href="https://cybercrime.gov.in" target="_blank">Report Cybercrime</a>
+    </p>
+    <p style="margin-top:6px; font-size:0.75rem;">
+      Trained on 96,674 job posts · Random Forest · 99.67% accuracy · Not financial or legal advice
+    </p>
   </div>
 
   <script src="/static/script.js"></script>
+
+  <script>
+    function shareWhatsApp() {
+      const verdict = document.getElementById('verdict').textContent;
+      const score   = document.getElementById('scoreNumber').textContent;
+      const text    = `I checked a job post on Fake Job Detector India — Result: ${verdict} (Risk: ${score}/100). Check any job post here: https://fake-job-detector-np6q.onrender.com`;
+      window.open('https://wa.me/?text=' + encodeURIComponent(text), '_blank');
+    }
+    function shareTwitter() {
+      const verdict = document.getElementById('verdict').textContent;
+      const text    = `Just checked a job post — Result: ${verdict}. Free tool to detect fake jobs in India: https://fake-job-detector-np6q.onrender.com via @FakeJobDetector`;
+      window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(text), '_blank');
+    }
+    function copyLink() {
+      navigator.clipboard.writeText('https://fake-job-detector-np6q.onrender.com');
+      alert('Link copied! Share it with friends to keep them safe.');
+    }
+  </script>
+
 </body>
 </html>

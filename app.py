@@ -9,6 +9,10 @@ CORS(app)
 def index():
     return send_from_directory("static", "index.html")
 
+@app.route("/privacy")
+def privacy():
+    return send_from_directory("static", "privacy.html")
+
 @app.route("/analyze", methods=["POST"])
 def analyze():
     data = request.get_json()

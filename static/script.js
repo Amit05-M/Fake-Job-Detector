@@ -43,6 +43,7 @@ Selection Process:
 Apply at: https://infosys.com/careers or LinkedIn
 Email: careers@infosys.com`;
 
+
 function loadExample(type) {
   document.getElementById('jobText').value =
     type === 'fake' ? FAKE_EXAMPLE : REAL_EXAMPLE;
