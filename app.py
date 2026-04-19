@@ -12,9 +12,10 @@ from flask import send_from_directory
 def index():
     return send_from_directory("static", "index.html")
 
+# CORRECT
 @app.route('/ads.txt')
 def ads_txt():
-    return send_from_directory('.', 'ads.txt')
+    return send_from_directory('static', 'ads.txt')
 
 @app.route('/test')
 def test():
