@@ -5,12 +5,15 @@ from analyzer import analyze_job_post
 app = Flask(__name__, static_folder="static", static_url_path="/static")
 CORS(app)
 
+from flask import send_from_directory
+
+
 @app.route("/")
 def index():
     return send_from_directory("static", "index.html")
 
 @app.route('/ads.txt')
-def ads():
+def ads_txt():
     return send_from_directory('.', 'ads.txt')
 
 @app.route("/privacy")
