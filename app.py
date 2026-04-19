@@ -13,8 +13,11 @@ def index():
     return send_from_directory("static", "index.html")
 
 @app.route('/ads.txt')
-def serve_ads():
+def ads():
     return app.send_static_file('ads.txt')
+@app.route('/test')
+def test():
+    return "Working"
 
 @app.route("/privacy")
 def privacy():
