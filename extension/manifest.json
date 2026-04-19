@@ -9,7 +9,7 @@
   ],
   "host_permissions": [
     "http://127.0.0.1:5000/*",
-    "https://fake-job-detector-np6q.onrender.com",
+    "https://fake-job-detector-np6q.onrender.com/*",
     "https://*.naukri.com/*",
     "https://*.linkedin.com/*",
     "https://*.indeed.com/*",

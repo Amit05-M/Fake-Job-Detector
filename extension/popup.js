@@ -46,7 +46,7 @@ async function analyzeManual() {
 // ── Call Flask API ──
 async function runAnalysis(jobText) {
   try {
-    const res = await fetch(API_URL, {
+    const res = await fetch(API_URL + "/analyze", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ job_text: jobText })
