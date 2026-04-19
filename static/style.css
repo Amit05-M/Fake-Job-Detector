@@ -34,7 +34,12 @@ body {
   letter-spacing: 0.07em; color: #999;
   margin-bottom: 1rem; font-weight: 500;
 }
-
+@media (max-width: 600px) {
+  .container { padding: 0 0.75rem; }
+  .site-header h1 { font-size: 1.4rem; }
+  .site-header p { font-size: 0.9rem; }
+  ins.adsbygoogle { min-height: 60px !important; }
+}
 textarea {
   width: 100%; min-height: 200px; resize: vertical;
   border: 1px solid #e0e0e0; border-radius: 10px;
