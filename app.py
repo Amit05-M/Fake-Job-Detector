@@ -9,6 +9,10 @@ CORS(app)
 def index():
     return send_from_directory("static", "index.html")
 
+@app.route('/ads.txt')
+def ads():
+    return send_from_directory('.', 'ads.txt')
+
 @app.route("/privacy")
 def privacy():
     return send_from_directory("static", "privacy.html")
