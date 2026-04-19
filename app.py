@@ -13,8 +13,9 @@ def index():
     return send_from_directory("static", "index.html")
 
 @app.route('/ads.txt')
-def ads():
-    return app.send_static_file('ads.txt')
+def ads_txt():
+    return send_from_directory('.', 'ads.txt')
+
 @app.route('/test')
 def test():
     return "Working"
