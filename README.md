@@ -21,8 +21,14 @@ python app.py
 ```
 Open https://fake-job-detector-np6q.onrender.com
 
-## Chrome Extension
-Load the `extension/` folder in Chrome developer mode.
+## Install Chrome Extension (Free)
+1. Download this repo as ZIP
+2. Extract it
+3. Open Chrome → go to chrome://extensions/
+4. Enable "Developer mode" (top right toggle)
+5. Click "Load unpacked"
+6. Select the `extension/` folder
+7. Done! ✅
 
 ## Accuracy
 - Random Forest: 99.67% accuracy · F1: 0.7789
