@@ -17,6 +17,10 @@ def index():
 def ads_txt():
     return send_from_directory('static', 'ads.txt')
 
+@app.route('/about')
+def about():
+    return send_from_directory('static', 'about.html')
+
 @app.route('/test')
 def test():
     return "Working"
