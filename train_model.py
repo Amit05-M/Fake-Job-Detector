@@ -1,3 +1,8 @@
+# Fake Job Detector India
+# Copyright (c) 2026 Amit Mastud
+# GitHub: github.com/Amit05-M/fake-job-detector
+# All rights reserved.
+
 import pandas as pd
 import numpy as np
 import joblib

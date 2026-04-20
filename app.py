@@ -1,3 +1,8 @@
+# Fake Job Detector India
+# Copyright (c) 2026 Amit Mastud
+# GitHub: github.com/Amit05-M/fake-job-detector
+# All rights reserved.
+
 from flask import Flask, request, jsonify, send_from_directory
 from flask_cors import CORS
 from analyzer import analyze_job_post
