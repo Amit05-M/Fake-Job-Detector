@@ -34,8 +34,14 @@ def test():
 def privacy():
     return send_from_directory("static", "privacy.html")
 
-@app.route("/analyze", methods=["POST"])
+@app.route('/analyze', methods=['GET', 'POST'])
 def analyze():
+    if request.method == 'GET':
+        return jsonify({
+            "status": "ok",
+            "message": "Fake Job Detector API is running. Send POST request with job_text."
+        })
+
     data = request.get_json()
 
     if not data or "job_text" not in data:
