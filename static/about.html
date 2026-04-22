@@ -3,81 +3,194 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About — Fake Job Detector India</title>
-  <link rel="stylesheet" href="/static/style.css"/>
+  <title>About — Fake Job Detector India | How Our AI Works</title>
+  <meta name="description" content="Learn how Fake Job Detector India uses Machine Learning (Random Forest, TF-IDF) trained on 96,674 job posts to detect fake job scams with 99.67% accuracy. Built for Indian job seekers."/>
+  <meta name="keywords" content="fake job detector about, how fake job detector works, ml job scam detector india, random forest job fraud detection"/>
+  <meta name="google-adsense-account" content="ca-pub-4915960792662137"/>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4915960792662137" crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6JYHV9CXSN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-6JYHV9CXSN');
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy: #0f172a; --blue: #2563eb; --blue-light: #3b82f6; --blue-pale: #eff6ff;
+      --gray-50: #f8fafc; --gray-100: #f1f5f9; --gray-200: #e2e8f0; --gray-400: #94a3b8;
+      --gray-600: #475569; --gray-700: #334155; --gray-800: #1e293b; --radius: 12px;
+      --shadow: 0 1px 3px rgba(0,0,0,0.08), 0 4px 16px rgba(0,0,0,0.06);
+    }
+    body { font-family: 'Inter', sans-serif; background: var(--gray-50); color: var(--gray-800); line-height: 1.6; }
+    nav { background: #fff; border-bottom: 1px solid var(--gray-200); position: sticky; top: 0; z-index: 100; box-shadow: 0 1px 8px rgba(0,0,0,0.06); }
+    .nav-inner { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; height: 64px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .nav-logo-icon { width: 36px; height: 36px; background: linear-gradient(135deg, var(--blue), #1d4ed8); border-radius: 9px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
+    .nav-logo-text { font-family: 'Sora', sans-serif; font-size: 1.05rem; font-weight: 700; color: var(--navy); }
+    .nav-logo-text span { color: var(--blue); }
+    .nav-links { display: flex; align-items: center; gap: 1.5rem; list-style: none; }
+    .nav-links a { text-decoration: none; font-size: 0.9rem; font-weight: 500; color: var(--gray-600); transition: color 0.2s; }
+    .nav-links a:hover { color: var(--blue); }
+    .nav-cta { background: var(--blue); color: #fff !important; padding: 8px 18px; border-radius: 8px; }
+
+    .page-hero { background: linear-gradient(160deg, #0f172a 0%, #1e3a8a 100%); color: #fff; padding: 4rem 1.5rem 3rem; text-align: center; }
+    .page-hero h1 { font-family: 'Sora', sans-serif; font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 800; margin-bottom: 1rem; }
+    .page-hero p { font-size: 1rem; color: #cbd5e1; max-width: 560px; margin: 0 auto; line-height: 1.7; }
+
+    .page-wrap { max-width: 860px; margin: 0 auto; padding: 0 1.5rem; }
+    .content-section { padding: 3rem 0; }
+    .content-card { background: #fff; border: 1px solid var(--gray-200); border-radius: var(--radius); padding: 2.5rem; margin-bottom: 1.5rem; box-shadow: var(--shadow); }
+    .content-card h2 { font-family: 'Sora', sans-serif; font-size: 1.3rem; font-weight: 700; color: var(--navy); margin-bottom: 1rem; }
+    .content-card p { font-size: 0.95rem; color: var(--gray-600); line-height: 1.8; margin-bottom: 1rem; }
+    .content-card p:last-child { margin-bottom: 0; }
+    .content-card ul { font-size: 0.95rem; color: var(--gray-600); line-height: 1.9; padding-left: 1.4rem; }
+    .content-card li { margin-bottom: 0.25rem; }
+
+    .tech-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+    .tech-item { background: var(--blue-pale); border: 1px solid #bfdbfe; border-radius: 10px; padding: 1rem 1.25rem; text-align: center; }
+    .tech-item .label { font-family: 'Sora', sans-serif; font-weight: 700; color: var(--blue); font-size: 0.95rem; }
+    .tech-item .desc { font-size: 0.8rem; color: #3b82f6; margin-top: 4px; }
+
+    .stat-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+    .stat-box { background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: 10px; padding: 1.25rem; text-align: center; }
+    .stat-box .num { font-family: 'Sora', sans-serif; font-size: 1.6rem; font-weight: 800; color: var(--navy); }
+    .stat-box .lbl { font-size: 0.8rem; color: var(--gray-400); margin-top: 4px; }
+
+    .ad-slot { background: var(--gray-100); border: 1px dashed var(--gray-300); border-radius: var(--radius); min-height: 100px; display: flex; align-items: center; justify-content: center; margin: 2rem 0; }
+
+    footer { background: var(--navy); color: #94a3b8; padding: 2rem 1.5rem; text-align: center; font-size: 0.85rem; }
+    footer a { color: #64748b; text-decoration: none; }
+    footer a:hover { color: #93c5fd; }
+    @media (max-width: 768px) { .nav-links { display: none; } }
+  </style>
 </head>
 <body>
-  <div class="site-header" style="background:#1a237e; color:#fff; padding:2rem 1rem; text-align:center;">
-    <h1 style="font-size:1.8rem; font-weight:700;">About Fake Job Detector India</h1>
-    <p style="opacity:0.9; margin-top:0.5rem;">Free ML-powered protection for Indian job seekers</p>
+
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">
+      <div class="nav-logo-icon">🛡️</div>
+      <div class="nav-logo-text">Fake <span>Job Detector</span></div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/privacy">Privacy</a></li>
+      <li><a href="/#analyzer" class="nav-cta">Check a Job →</a></li>
+    </ul>
   </div>
+</nav>
 
-  <div class="container" style="max-width:740px; margin:0 auto; padding:2rem 1rem;">
+<div class="page-hero">
+  <h1>About Fake Job Detector India</h1>
+  <p>Learn why we built this tool, how the AI works, and our promise to Indian job seekers.</p>
+</div>
 
-    <div class="card">
-      <h2 style="font-size:1.2rem; font-weight:600; margin-bottom:1rem; color:#1a237e;">Why we built this</h2>
-      <p style="font-size:0.95rem; line-height:1.8; color:#444;">
-        Every day, millions of Indians receive fake job offers on WhatsApp, Naukri, and LinkedIn.
-        Scammers pose as Infosys, TCS, government ministries, and other trusted organizations.
-        They ask for registration fees, Aadhaar numbers, and bank details.
-        People lose thousands of rupees and their personal data to these scams.
-      </p>
-      <p style="font-size:0.95rem; line-height:1.8; color:#444; margin-top:1rem;">
-        We built Fake Job Detector India to give every job seeker a free, instant way to
-        verify any job post before applying or paying anything.
-      </p>
+<div class="page-wrap">
+  <div class="content-section">
+
+    <!-- Ad -->
+    <div class="ad-slot">
+      <ins class="adsbygoogle" style="display:block; width:100%;"
+           data-ad-client="ca-pub-4915960792662137" data-ad-slot="4823095229"
+           data-ad-format="auto" data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
     </div>
 
-    <div class="card">
-      <h2 style="font-size:1.2rem; font-weight:600; margin-bottom:1rem; color:#1a237e;">How it works</h2>
-      <p style="font-size:0.95rem; line-height:1.8; color:#444;">
-        Our Machine Learning model was trained on 96,674 real job postings from two datasets:
-        the EMSCAD dataset (17,880 global job posts labeled fake or real) and the Naukri.com
-        India dataset (78,794 real Indian job posts). We use a Random Forest classifier with
-        TF-IDF text analysis to achieve 99.67% accuracy in detecting fake job posts.
-      </p>
-      <p style="font-size:0.95rem; line-height:1.8; color:#444; margin-top:1rem;">
-        On top of the ML model, we apply India-specific rules that detect common local scam
-        patterns — registration fees, WhatsApp-only contact, unrealistic salary claims,
-        and fake government job offers.
-      </p>
+    <div class="content-card" id="why-we-built-this">
+      <h2>🎯 Why we built this</h2>
+      <p>Every single day, millions of Indians receive fake job offers on WhatsApp, email, Naukri, and LinkedIn. Scammers impersonate well-known companies like Infosys, TCS, Wipro, and even government ministries. They promise high-paying roles and then ask victims to pay a "registration fee," "security deposit," or "training cost" — often ranging from ₹500 to ₹50,000.</p>
+      <p>These scams target India's most vulnerable job seekers — freshers, people from small towns, those recently laid off, and anyone desperate for income. According to government cybercrime data, job fraud is one of the fastest-growing categories of online scams in India, with thousands of complaints filed every month.</p>
+      <p>Fake Job Detector India was built to give every job seeker — regardless of technical knowledge — a free, instant, and reliable way to verify any job post before responding, paying, or sharing personal information. We wanted a tool trained specifically on Indian job data, not just generic global datasets.</p>
     </div>
 
-    <div class="card">
-      <h2 style="font-size:1.2rem; font-weight:600; margin-bottom:1rem; color:#1a237e;">Our promise</h2>
-      <ul style="font-size:0.95rem; line-height:2; color:#444; padding-left:1.2rem;">
-        <li>We never store any job post text you submit</li>
-        <li>No account or login required ever</li>
-        <li>Completely free for all Indian job seekers</li>
-        <li>No personal data collected</li>
-        <li>Open source — code available on GitHub</li>
+    <div class="content-card" id="how-it-works">
+      <h2>🤖 How the AI works</h2>
+      <p>At the core of Fake Job Detector India is a <strong>Random Forest machine learning classifier</strong>. Random Forest is an ensemble method that builds hundreds of decision trees during training and combines their predictions for higher accuracy and robustness than any single decision tree.</p>
+      <p>Job post text is first converted into numerical features using <strong>TF-IDF (Term Frequency–Inverse Document Frequency)</strong> vectorization. TF-IDF identifies which words and phrases are especially significant in distinguishing fake jobs from real ones — for example, terms like "registration fee," "weekly payment," "WhatsApp only," and "no experience needed" score very high in fake job posts.</p>
+      <p>On top of the ML model, we apply a layer of <strong>India-specific rule-based detection</strong> that catches local scam patterns the global training data might miss: unrealistically high salary figures in rupees, mentions of specific fake IT company names, requests for Aadhaar or PAN upfront, and WhatsApp-only contact patterns.</p>
+      <p>The final result combines the ML probability score with the rule-based flags into a single <strong>Risk Score (0–100)</strong> and a verdict: Safe, Suspicious, or High Risk.</p>
+
+      <div class="tech-grid">
+        <div class="tech-item"><div class="label">Random Forest</div><div class="desc">ML classifier</div></div>
+        <div class="tech-item"><div class="label">TF-IDF</div><div class="desc">Text vectorization</div></div>
+        <div class="tech-item"><div class="label">scikit-learn</div><div class="desc">ML framework</div></div>
+        <div class="tech-item"><div class="label">Flask</div><div class="desc">Python backend</div></div>
+        <div class="tech-item"><div class="label">EMSCAD</div><div class="desc">Global dataset</div></div>
+        <div class="tech-item"><div class="label">Naukri India</div><div class="desc">Indian dataset</div></div>
+      </div>
+    </div>
+
+    <div class="content-card" id="accuracy">
+      <h2>📊 Model accuracy and training data</h2>
+      <p>Our model was trained on a combined dataset of <strong>96,674 labeled job postings</strong>:</p>
+      <ul>
+        <li><strong>EMSCAD dataset</strong> — 17,880 global job posts labeled as real or fake, widely used in academic fake-job detection research</li>
+        <li><strong>Naukri India dataset</strong> — 78,794 real Indian job postings from Naukri.com, providing deep coverage of the Indian job market vocabulary and patterns</li>
+      </ul>
+      <p style="margin-top:1rem;">The model achieves the following metrics on the held-out test set:</p>
+      <div class="stat-row">
+        <div class="stat-box"><div class="num">99.67%</div><div class="lbl">Classification accuracy</div></div>
+        <div class="stat-box"><div class="num">0.7789</div><div class="lbl">F1 score (fake class)</div></div>
+        <div class="stat-box"><div class="num">96,674</div><div class="lbl">Training samples</div></div>
+        <div class="stat-box"><div class="num">100+</div><div class="lbl">India-specific rules</div></div>
+      </div>
+      <p style="margin-top:1.5rem;">A note on the F1 score: the fake-job class is inherently imbalanced (real jobs outnumber fake ones). An F1 of 0.7789 on the fake class means our model correctly identifies most fake jobs while keeping false positives low — a practical balance for real-world use.</p>
+    </div>
+
+    <div class="content-card">
+      <h2>🔒 Our privacy promise</h2>
+      <ul>
+        <li>We <strong>never store</strong> the job post text you submit for analysis</li>
+        <li>We <strong>never require</strong> registration, login, or any personal information</li>
+        <li>We <strong>do not sell</strong> any user data to third parties</li>
+        <li>We use Google Analytics to understand aggregate traffic, but it does not identify individuals</li>
+        <li>The tool is <strong>completely anonymous</strong> — not even your IP is logged for job submissions</li>
+        <li>You can read our full <a href="/privacy" style="color:var(--blue);">Privacy Policy here</a></li>
       </ul>
     </div>
 
-    <div class="card">
-      <h2 style="font-size:1.2rem; font-weight:600; margin-bottom:1rem; color:#1a237e;">Built by</h2>
-      <p style="font-size:0.95rem; line-height:1.8; color:#444;">
-        Amit Mastud — developer and ML engineer based in India.<br/>
-        LinkedIn: <a href="https://www.linkedin.com/in/amit-mastud-2ab8a3283"
-        style="color:#3949ab;">linkedin.com/in/amit-mastud-2ab8a3283</a><br/>
-        GitHub: <a href="https://github.com" style="color:#3949ab;">github.com/yourusername</a>
-      </p>
+    <!-- Ad -->
+    <div class="ad-slot">
+      <ins class="adsbygoogle" style="display:block; width:100%;"
+           data-ad-client="ca-pub-4915960792662137" data-ad-slot="7118086077"
+           data-ad-format="auto" data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
     </div>
 
-    <div style="text-align:center; margin-top:1.5rem;">
-      <a href="/" style="background:#3949ab; color:#fff; padding:0.8rem 2rem;
-         border-radius:8px; text-decoration:none; font-size:0.95rem; font-weight:500;">
-        Try the detector &rarr;
-      </a>
+    <div class="content-card">
+      <h2>👤 About the developer</h2>
+      <p>Fake Job Detector India was built by <strong>Amit Mastud</strong>, an independent developer passionate about using machine learning to solve real problems that affect everyday Indians. The project started as a personal initiative after observing how many people in his network had received — and sometimes fallen victim to — fake job scams on WhatsApp.</p>
+      <p>The project is open source. All code, including the training pipeline and Chrome extension, is available on <a href="https://github.com/Amit05-M/fake-job-detector" target="_blank" style="color:var(--blue);">GitHub</a>. Contributions, suggestions, and bug reports are welcome.</p>
+    </div>
+
+    <div class="content-card">
+      <h2>📣 How to report a fake job</h2>
+      <p>If you've found a fake job post — whether our tool flagged it or you noticed it yourself — please report it to:</p>
+      <ul>
+        <li><strong>National Cybercrime Reporting Portal:</strong> <a href="https://cybercrime.gov.in" target="_blank" style="color:var(--blue);">cybercrime.gov.in</a></li>
+        <li><strong>National Cybercrime Helpline:</strong> 1930</li>
+        <li><strong>The platform</strong> where you found it (Naukri, LinkedIn, Indeed all have reporting options)</li>
+        <li><strong>Your local police cyber cell</strong> if you have already been defrauded</li>
+      </ul>
+      <p style="margin-top:1rem;">Reporting fake jobs helps authorities track fraudsters and protects other job seekers. It takes less than 5 minutes.</p>
     </div>
 
   </div>
+</div>
 
-  <div style="text-align:center; padding:1.5rem; color:#aaa; font-size:0.82rem; border-top:1px solid #eee; margin-top:2rem;">
-    <a href="/privacy" style="color:#3949ab; text-decoration:none;">Privacy Policy</a> &middot;
-    <a href="/about" style="color:#3949ab; text-decoration:none;">About</a> &middot;
-    <a href="https://cybercrime.gov.in" style="color:#3949ab; text-decoration:none;">Report Cybercrime</a>
-  </div>
+<footer>
+  <p>© 2026 Amit Mastud — Fake Job Detector India &nbsp;·&nbsp;
+    <a href="/">Home</a> &nbsp;·&nbsp;
+    <a href="/privacy">Privacy Policy</a> &nbsp;·&nbsp;
+    <a href="https://cybercrime.gov.in" target="_blank">Report Cybercrime</a>
+  </p>
+  <p style="margin-top:0.5rem; font-size:0.78rem;">Not legal or financial advice. Trained on 96,674 job posts · Random Forest · 99.67% accuracy.</p>
+</footer>
 
 </body>
 </html>

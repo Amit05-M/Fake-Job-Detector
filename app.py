@@ -26,6 +26,10 @@ def ads_txt():
 def about():
     return send_from_directory('static', 'about.html')
 
+@app.route('/blog')
+def blog():
+    return send_from_directory('static', 'blog.html')
+
 @app.route('/test')
 def test():
     return "Working"
