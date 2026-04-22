@@ -17,9 +17,13 @@ from flask import send_from_directory
 def index():
     return send_from_directory("static", "index.html")
 
-@app.route("/privacy")
+@app.route('/privacy')
 def privacy():
-    return send_from_directory("static", "privacy.html")
+    return send_from_directory('static', 'privacy.html')
+
+@app.route('/privacy.html')
+def privacy_html():
+    return send_from_directory('static', 'privacy.html')
 
 # CORRECT
 @app.route('/ads.txt')
