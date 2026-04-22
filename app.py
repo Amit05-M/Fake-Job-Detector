@@ -12,6 +12,25 @@ CORS(app)
 
 from flask import send_from_directory
 
+from flask import Response
+
+@app.route('/sitemap.xml')
+def sitemap():
+    xml = '''<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://fake-job-detector-np6q.onrender.com/</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+</urlset>'''
+    return Response(xml, mimetype='application/xml')
+
+@app.route('/robots.txt')
+def robots():
+    content = "User-agent: *\nAllow: /\nSitemap: https://fake-job-detector-np6q.onrender.com/sitemap.xml"
+    return Response(content, mimetype='text/plain')
 
 @app.route("/")
 def index():
