@@ -1,9 +1,22 @@
 const API_URL = "https://fake-job-detector-np6q.onrender.com";
+
 // ── Button listeners ──
 document.getElementById("analyzePageBtn").addEventListener("click", analyzePage);
 document.getElementById("analyzeManualBtn").addEventListener("click", analyzeManual);
 document.getElementById("backBtn").addEventListener("click", goHome);
 document.getElementById("retryBtn").addEventListener("click", goHome);
+
+// ── Website link ──
+document.getElementById("websiteLink").addEventListener("click", (e) => {
+  e.preventDefault();
+  chrome.tabs.create({ url: "https://fake-job-detector-np6q.onrender.com/" });
+});
+
+// ── Chrome Store link ──
+document.getElementById("storeLink").addEventListener("click", (e) => {
+  e.preventDefault();
+  chrome.tabs.create({ url: "https://chromewebstore.google.com/detail/fake-job-detector-india/bciiilkcfiggdnmkdglookmddfjpagjm" });
+});
 
 // ── Analyze current browser tab ──
 async function analyzePage() {

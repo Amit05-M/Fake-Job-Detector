@@ -132,3 +132,74 @@ textarea:focus { border-color: #3949ab; }
 #error { padding: 20px; text-align: center; color: #c62828; }
 
 .hidden { display: none; }
+.footer {
+  text-align: center;
+  padding: 10px 0 4px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  margin-top: 14px;
+}
+
+.footer a {
+  color: #888;
+  font-size: 11px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.footer a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.footer-divider {
+  color: #555;
+  margin: 0 6px;
+  font-size: 11px;
+}
+/* ── Paste this at the bottom of your style.css ── */
+
+.footer-banner {
+  margin-top: 16px;
+  padding: 12px 14px;
+  background: linear-gradient(135deg, #1e293b, #1e3a5f);
+  border-radius: 10px;
+  border: 1px solid rgba(99, 179, 255, 0.25);
+  text-align: center;
+}
+
+.footer-banner-text {
+  font-size: 13px;
+  font-weight: 600;
+  color: #e2e8f0;
+  margin-bottom: 8px;
+}
+
+.footer-website-btn {
+  display: block;
+  background: #2563eb;
+  color: #ffffff !important;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 9px 14px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.footer-website-btn:hover {
+  background: #1d4ed8;
+}
+
+.footer-store-link {
+  display: block;
+  font-size: 12px;
+  color: #facc15 !important;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.footer-store-link:hover {
+  text-decoration: underline;
+}
